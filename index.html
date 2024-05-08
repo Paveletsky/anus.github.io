@@ -64,7 +64,8 @@
       width: 100%;
       height: 100%;
       position: fixed;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-image: url(images/overlay.png);
+      background-color: rgba(0, 0, 0, 0.2);
       transition-duration: 1s;
     }
     .title {
@@ -95,6 +96,8 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono&amp;display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/main.css" /> -->
     <title>kimano33</title>
+
+    <link rel="stylesheet" href="css/default.css">
   </head>
   <body>
 		<audio id="mus" autoplay loop><source src="anus.mp3" type="audio/ogg"></audio>
@@ -106,25 +109,20 @@
     <div class="background"></div>
     <div class="overhaul"></div>
 
-    <nav>
-      <div id="announcement"></div>
-      <span id="map">Вы подключаетесь к карте </span>
-      <span id="steamid"></span>
-    </nav>
+    <div id="player"></div>
 
-    <div id="debug"></div>
+    <div class="toolbar">
+        <div id="download-box">
+            Пока загружаешься завари кофеек. Заходи на наш дискорд сервер, ссылка есть на нашем сайте
+            <a style="color: aliceblue; font-size: 12px;" href="https://oldhomigrad.ru/">oldhomigrad.ru</a>
+            <h3>С нами — среди лучших, кайфовой игры!</h3>
+        </div>
 
-    <main>
-      <div class="title">
-        <h2></h2>
-        <h1 id="title"></h1>
-        <div id="history"></div>
-      </div>
-      <div class="under-nav"></div>
-      <div class="loading-box"></div>
-    </main>
+        <div id="download-box2">
+            Old Homigrad
+        </div>
+    </div>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
       document.write(
         '<script src="js/config.js?' + Math.random() + '"><\/script>'
@@ -132,9 +130,11 @@
       document.write(
         '<script src="js/main.js?' + Math.random() + '"><\/script>'
       );
-    </script><script src="js/config.js"></script><script src="js/main.js"></script>
-    <!-- <script src="config.js"></script> -->
-    <!-- <script src="js/main.js"></script> -->
-  
+    </script>
+
+  <script async src="js/jquery-3.4.1.min.js"></script>
+  <script async src="js/config.js"></script>
+  <script async src="js/main.js"></script>
+
 
 </body></html>
